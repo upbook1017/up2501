@@ -9,13 +9,13 @@ class Board extends Model
 {
     use HasFactory;
 
-    protected $guarded = array('id');
+    protected $guarded = array('id');//idの値不要とする。
 
-    public static $rules = array(
+    public static $rules = array(//ルール設定
         'title' => 'required'
     );
 
-    public function getData()
+    public function getData()//値を文字列にまとめて返す。(掲示板作成時刻も文字列に入れておく。)
     {
         return $this->title;
     }
