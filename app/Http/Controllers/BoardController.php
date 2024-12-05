@@ -7,10 +7,26 @@ use Illuminate\Http\Request;
 
 class BoardController extends Controller
 {
-
-    public function index(Request $request)
+    //掲示板一覧
+    public function index(Request $request)//Board内データの値全てをindexに渡す。
     {
         $items = Board::all();
-        return view('board.index', ['items' => $items]);//Board内データの値全てをindexに渡す。
+        return view('board.index', ['items' => $items]);
     }
+
+    public function add(Request $request)//新規掲示板作成ページ表示
+    {
+        return view('board.add');
+    }
+
+    public function create(Request $request)//新規掲示板作成ページ上でのタイトルと一回目のメッセージ作成
+    {
+        $request->validatte(Board::$rules);
+        $post = new Board;
+        $form = $request->all();
+        unset($form['_token']);
+        $post->fill($form)->save();
+        return redirect('/post');
+    }
+
 }
