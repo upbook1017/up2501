@@ -21,7 +21,7 @@ class BoardController extends Controller
 
     public function create(Request $request)//新規掲示板作成ページ上でのタイトルと一回目のメッセージ作成
     {
-        $request->validatte(Board::$rules);
+        $request->validate(Board::$rules);
         $post = new Board;
         $form = $request->all();
         unset($form['_token']);

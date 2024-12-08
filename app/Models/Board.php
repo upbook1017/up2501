@@ -20,4 +20,9 @@ class Board extends Model
         return $this->title;
     }
 
+    public function posts()//Boardモデルは複数のPostモデルを持つ
+    {
+        return $this->hasMany('App\Models\Post');
+    }
+
 }

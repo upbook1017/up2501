@@ -17,9 +17,13 @@ class Post extends Model
         'message' => 'required'
     );
 
-    public function getData()
+    public function board()//Postモデルは1つのBoardに属する。
     {
-        return $this->name . ':' . $this->message;
+        return $this->belongsTo('App\Models\Board');
     }
 
+    public function getData()
+    {
+        return $this->name . ':' . $this->message . $this->board->title;
+    }
 }

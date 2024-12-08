@@ -17,6 +17,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+//BoardControllerのアクション
 Route::get('board', 'App\Http\Controllers\BoardController@index');
+Route::get('board/add', 'App\Http\Controllers\BoardController@add');
+Route::post('board/add', 'App\Http\Controllers\BoardController@create');
 
-require __DIR__.'/auth.php';
+//PostControllerのアクション
+Route::get('post', 'App\Http\Controllers\PostController@index');
+Route::post('post', 'App\Http\Controllers\PostController@create');
+
+require __DIR__ . '/auth.php';

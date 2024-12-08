@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
+use App\Models\Post;//Postモデルを使用可能
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -15,7 +15,7 @@ class PostController extends Controller
 
     public function create(Request $request)//投稿内容表示ページ上で新しく投稿する。
     {
-        $request->validatte(Post::$rules);
+        $request->validate(Post::$rules);
         $post = new Post;
         $form = $request->all();
         unset($form['_token']);
