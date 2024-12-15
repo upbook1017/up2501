@@ -24,7 +24,6 @@ Route::get('board/create', 'App\Http\Controllers\BoardController@create');
 Route::post('board/create', 'App\Http\Controllers\BoardController@store');
 
 //PostControllerのアクション
-Route::get('post', 'App\Http\Controllers\PostController@index');
-Route::post('post', 'App\Http\Controllers\PostController@create');
+Route::post('board/show/{board}', 'App\Http\Controllers\PostController@store')->name('board.show');
 
 require __DIR__ . '/auth.php';
