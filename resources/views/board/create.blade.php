@@ -14,17 +14,17 @@
 
             <tr>
                 <th>name: </th>
-                <td><input type="text" name="name" value="{{ old('name') }}"></td>
+                <td><input type="text" name="posts[name]" value="{{ old('posts.name') }}"></td>
             </tr>
 
             <tr>
                 <th>message: </th>
-                <td><input type="text" name="message" value="{{ old('message') }}"></td>
+                <td><input type="text" name="posts[message]" value="{{ old('posts.message') }}"></td>
             </tr>
 
             <tr>
                 <th></th>
-                <td><input type="submit" value="send"></td>
+                <td><input type="submit" value="新規投稿"></td>
             </tr>
 
         </table>

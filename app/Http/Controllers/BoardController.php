@@ -14,13 +14,13 @@ class BoardController extends Controller
         $items = Board::get();
         return view('board.index', ['items' => $items]);
     }
-
-    public function show(Board $board)
+    //投稿内容
+    public function show(Board $board)//indexより該当する投稿内容を表示
     {
         $posts = $board->posts;
         return view('board.show', compact('board', 'posts'));
     }
-
+    //新規投稿作成ページ
     public function create(Request $request)//新規掲示板作成ページ表示
     {
         return view('board.create');
@@ -29,11 +29,14 @@ class BoardController extends Controller
     public function store(Request $request)//新規掲示板作成ページ上でのタイトルと一回目のメッセージ作成
     {
         $request->validate(Board::$rules);
-        $post = new Board;
+        $board = new Board;
         $form = $request->all();
         unset($form['_token']);
-        $post->fill($form)->save();
-        return redirect('/post');
+        $board->fill($form)->save();
+        $post = $form['posts'];
+        $board->posts()->create($post);
+
+        return redirect()->route('board.show', ['board' => $board->id]);
     }
 
 }
