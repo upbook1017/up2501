@@ -19,8 +19,9 @@ Route::middleware('auth')->group(function () {
 
 //BoardControllerのアクション
 Route::get('board', 'App\Http\Controllers\BoardController@index');
-Route::get('board/add', 'App\Http\Controllers\BoardController@add');
-Route::post('board/add', 'App\Http\Controllers\BoardController@create');
+Route::get('board/show/{board}', 'App\Http\Controllers\BoardController@show');
+Route::get('board/create', 'App\Http\Controllers\BoardController@create');
+Route::post('board/create', 'App\Http\Controllers\BoardController@store');
 
 //PostControllerのアクション
 Route::get('post', 'App\Http\Controllers\PostController@index');

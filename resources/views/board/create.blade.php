@@ -3,18 +3,18 @@
 @section('title', '掲示板新規作成')
 
 @section('content')
-    <form action="/board/add" method="post">
+    <form action="/board/create" method="post">
         <table>
             @csrf
 
             <tr>
-                <th>name: </th>
-                <td><input type="text" name="name" value="{{ old('name') }}"></td>
+                <th>title: </th>
+                <td><input type="text" name="title" value="{{ old('title') }}"></td>
             </tr>
 
             <tr>
-                <th>title: </th>
-                <td><input type="text" name="title" value="{{ old('title') }}"></td>
+                <th>name: </th>
+                <td><input type="text" name="name" value="{{ old('name') }}"></td>
             </tr>
 
             <tr>

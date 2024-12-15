@@ -24,6 +24,6 @@ class Post extends Model
 
     public function getData()
     {
-        return $this->name . ':' . $this->message . $this->board->title;
+        return $this->name . ':' . $this->message;
     }
 }

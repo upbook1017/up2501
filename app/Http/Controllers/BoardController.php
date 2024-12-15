@@ -10,16 +10,23 @@ class BoardController extends Controller
     //掲示板一覧
     public function index(Request $request)//Board内データの値全てをindexに渡す。
     {
-        $items = Board::all();
+        /*$items = Board::all();*///N+1問題によりコメント化
+        $items = Board::get();
         return view('board.index', ['items' => $items]);
     }
 
-    public function add(Request $request)//新規掲示板作成ページ表示
+    public function show(Board $board)
     {
-        return view('board.add');
+        $posts = $board->posts;
+        return view('board.show', compact('board', 'posts'));
     }
 
-    public function create(Request $request)//新規掲示板作成ページ上でのタイトルと一回目のメッセージ作成
+    public function create(Request $request)//新規掲示板作成ページ表示
+    {
+        return view('board.create');
+    }
+
+    public function store(Request $request)//新規掲示板作成ページ上でのタイトルと一回目のメッセージ作成
     {
         $request->validate(Board::$rules);
         $post = new Board;
