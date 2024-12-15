@@ -6,7 +6,7 @@
     <table>
         @foreach ($items as $item)
             <tr>
-                <td>{{ $item->getData() }}</td><!--Boardモデルの全てのデータを出力-->
+                <td><a href="{{ route('board.show', $item) }}">{{ $item->getData() }}</a></td><!--Boardモデルの全てのデータを出力-->
             </tr>
         @endforeach
     </table>
