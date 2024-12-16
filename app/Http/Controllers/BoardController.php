@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Board;//Boardモデルを使用可能にする。
+use App\Http\Requests\BoardAndPostRequest;//フォームリクエストよりvalidateメソッドを使用可能にする。
 use Illuminate\Http\Request;
 
 class BoardController extends Controller
@@ -26,9 +27,9 @@ class BoardController extends Controller
         return view('board.create');
     }
 
-    public function store(Request $request)//新規掲示板作成ページ上でのタイトルと一回目のメッセージ作成
+    public function store(BoardAndPostRequest $request)//新規掲示板作成ページ上でのタイトルと一回目のメッセージ作成
     {
-        $request->validate(Board::$rules);
+        /*$request->validate(Board::$rules);*/ //Board.phpの$rulesをコメントアウトしたため、コメントアウト
         $board = new Board;
         $form = $request->all();
         unset($form['_token']);

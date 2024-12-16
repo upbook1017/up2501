@@ -11,11 +11,11 @@ class Post extends Model
 
     protected $guarded = array('id');
 
-    public static $rules = array(
+    /*public static $rules = array( //ルール設定(フォームリクエスト(BoardAndPostRequest.php)よりルール設定にしたため、コメントアウト)
         'board_id' => 'required',
         'name' => 'required',
         'message' => 'required'
-    );
+    );*/
 
     public function board()//Postモデルは1つのBoardに属する。
     {

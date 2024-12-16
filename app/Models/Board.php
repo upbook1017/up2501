@@ -11,9 +11,9 @@ class Board extends Model
 
     protected $guarded = array('id');//idの値不要とする。
 
-    public static $rules = array(//ルール設定
+    /*public static $rules = array(   //ルール設定(フォームリクエスト(BoardAndPostRequest.php)よりルール設定にしたため、コメントアウト)
         'title' => 'required'
-    );
+    );*/
 
     public function getData()//値を文字列にまとめて返す。(掲示板作成時刻も文字列に入れておく。)
     {

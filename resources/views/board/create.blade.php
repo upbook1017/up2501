@@ -6,19 +6,33 @@
     <form action="/board/create" method="post">
         <table>
             @csrf
-
+            @error('title')
+                <tr>
+                    <td>{{ $message }}</td>
+                </tr>
+            @enderror
             <tr>
-                <th>title: </th>
+                <th>タイトル名: </th>
                 <td><input type="text" name="title" value="{{ old('title') }}"></td>
             </tr>
 
+            @error('posts.name')
+                <tr>
+                    <td>{{ $message }}</td>
+                </tr>
+            @enderror
             <tr>
-                <th>name: </th>
+                <th>名前: </th>
                 <td><input type="text" name="posts[name]" value="{{ old('posts.name') }}"></td>
             </tr>
 
+            @error('posts.message')
+                <tr>
+                    <td>{{ $message }}</td>
+                </tr>
+            @enderror
             <tr>
-                <th>message: </th>
+                <th>投稿内容: </th>
                 <td><input type="text" name="posts[message]" value="{{ old('posts.message') }}"></td>
             </tr>
 
