@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;//Postモデルを使用可能
+use App\Http\Requests\BoardAndPostRequest;//フォームリクエストよりvalidateメソッドを使用可能にする。
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
     //投稿内容ページ(新規投稿作成)
-    public function store(Request $request)//投稿内容表示ページ上で新しく投稿する。
+    public function store(BoardAndPostRequest $request)//投稿内容表示ページ上で新しく投稿する。
     {
-        $request->validate(Post::$rules);
+        /*$request->validate(Post::$rules);*/ //Post.phpの$rulesをコメントアウトしたため、コメントアウト
         $post = new Post;
         $form = $request->all();
         unset($form['_token']);

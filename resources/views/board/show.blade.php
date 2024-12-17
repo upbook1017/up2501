@@ -21,13 +21,23 @@
         @csrf
         <input type="hidden" name="board_id" value="{{ $board->id }}">
         <table>
+            @error('name')
+                <tr>
+                    <td>{{ $message }}</td>
+                </tr>
+            @enderror
             <tr>
-                <th>name:</th>
+                <th>名前:</th>
                 <td><input type="text" name="name" value="{{ old('name') }}"></td>
             </tr>
 
+            @error('message')
+                <tr>
+                    <td>{{ $message }}</td>
+                </tr>
+            @enderror
             <tr>
-                <th>message:</th>
+                <th>投稿内容:</th>
                 <td><input type="text" name="message" value="{{ old('message') }}"></td>
             </tr>
 
