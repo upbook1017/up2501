@@ -32,9 +32,15 @@ class BoardController extends Controller
         /*$request->validate(Board::$rules);*/ //Board.phpの$rulesをコメントアウトしたため、コメントアウト
         $board = new Board;
         $form = $request->all();
+        if (empty($form['name'])) {
+            $form['name'] = '名無しさん'; //'name'が空の時(未入力)は「名無しさん」と表記する。また、postのnameなので'posts.name'にはしない。
+        }
         unset($form['_token']);
         $board->fill($form)->save();
         $post = $form['posts'];
+        if (empty($post['name'])) {
+            $post['name'] = '名無しさん'; //post内の'name'が空の時(未設定)は「名無しさん」と表記する。また、postのnameなので'posts.name'にはしない。
+        }
         $board->posts()->create($post);
 
         return redirect()->route('board.show', ['board' => $board->id]);

@@ -14,6 +14,9 @@ class PostController extends Controller
         /*$request->validate(Post::$rules);*/ //Post.phpの$rulesをコメントアウトしたため、コメントアウト
         $post = new Post;
         $form = $request->all();
+        if (empty($form['name'])) {
+            $form['name'] = '名無しさん'; //'name'が空の時(未入力)は「名無しさん」と表記する。
+        }
         unset($form['_token']);
         $post->fill($form)->save();
         $board_id = $form['board_id'];
