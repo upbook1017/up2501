@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;//Postモデルを使用可能
 use App\Http\Requests\BoardAndPostRequest;//フォームリクエストよりvalidateメソッドを使用可能にする。
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;//cookieを使用可能にする。
 
 class PostController extends Controller
 {
@@ -17,6 +18,7 @@ class PostController extends Controller
         if (empty($form['name'])) {
             $form['name'] = '名無しさん'; //'name'が空の時(未入力)は「名無しさん」と表記する。
         }
+        Cookie::queue('name', $form['name'], 60);//cookieにより入力フォームの値を保存した。(クライアント側)
         unset($form['_token']);
         $post->fill($form)->save();
         $board_id = $form['board_id'];

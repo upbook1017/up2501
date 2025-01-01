@@ -13,7 +13,7 @@
             @enderror
             <tr>
                 <th>タイトル名: </th>
-                <td><input type="text" name="title" value="{{ old('title') }}"></td>
+                <td><input type="text" name="title" placeholder="タイトル名は0~20文字までです。" value="{{ old('title') }}"></td>
             </tr>
 
             @error('posts.name')
@@ -23,7 +23,8 @@
             @enderror
             <tr>
                 <th>名前: </th>
-                <td><input type="text" name="posts[name]" value="{{ old('posts.name') }}"></td>
+                <td><input type="text" name="posts[name]" placeholder="未入力の場合は「名無しさん」と表示されます。"
+                        value="{{ request()->cookie('posts.name', old('posts.name')) }}"></td>
             </tr>
 
             @error('posts.message')
@@ -33,7 +34,8 @@
             @enderror
             <tr>
                 <th>投稿内容: </th>
-                <td><input type="text" name="posts[message]" value="{{ old('posts.message') }}"></td>
+                <td><input type="text" name="posts[message]" placeholder="投稿内容は0~100文字までです。"
+                        value="{{ old('posts.message') }}"></td>
             </tr>
 
             <tr>

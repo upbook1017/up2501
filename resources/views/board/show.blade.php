@@ -12,7 +12,7 @@
     <table>
         @foreach ($posts as $post)
             <tr>
-                <td>{{ $post->getData() }}</td><!---->
+                <td>{{ $post->getData() }}</td><!--投稿内容を全て出力する-->
             </tr>
         @endforeach
     </table>
@@ -28,7 +28,8 @@
             @enderror
             <tr>
                 <th>名前:</th>
-                <td><input type="text" name="name" value="{{ old('name') }}"></td>
+                <td><input type="text" name="name" placeholder="未入力の場合は「名無しさん」と表示されます。"
+                        value="{{ request()->cookie('name', old('name')) }}"></td>
             </tr>
 
             @error('message')
@@ -38,7 +39,7 @@
             @enderror
             <tr>
                 <th>投稿内容:</th>
-                <td><input type="text" name="message" value="{{ old('message') }}"></td>
+                <td><input type="text" name="message" placeholder="投稿内容は0~100文字までです。" value="{{ old('message') }}"></td>
             </tr>
 
             <td><input type="submit" value="送信"></td>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Board;//Boardモデルを使用可能にする。
 use App\Http\Requests\BoardAndPostRequest;//フォームリクエストよりvalidateメソッドを使用可能にする。
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;//cookieを使用可能にする。
 
 class BoardController extends Controller
 {
@@ -41,7 +42,9 @@ class BoardController extends Controller
         if (empty($post['name'])) {
             $post['name'] = '名無しさん'; //post内の'name'が空の時(未設定)は「名無しさん」と表記する。また、postのnameなので'posts.name'にはしない。
         }
+        Cookie::queue('name', $form['name'], 60);//cookieを1時間に設定した。
         $board->posts()->create($post);
+        cookie::queue(cookie::forget('name'));//新規投稿ページ作成後は一旦cookieを削除する。
 
         return redirect()->route('board.show', ['board' => $board->id]);
     }
