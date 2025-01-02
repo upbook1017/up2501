@@ -13,7 +13,7 @@ class BoardController extends Controller
     public function index(Request $request)//Board内データの値全てをindexに渡す。
     {
         /*$items = Board::all();*///N+1問題によりコメント化
-        $items = Board::get();
+        $items = Board::withCount('posts')->get();//投稿内容の数を表示する。
         return view('board.index', ['items' => $items]);
     }
     //投稿内容
