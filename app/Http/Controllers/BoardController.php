@@ -12,9 +12,12 @@ class BoardController extends Controller
     //掲示板一覧
     public function index(Request $request)//Board内データの値全てをindexに渡す。
     {
+        $sortOrder = $request->get('sortOrder', 'asc');//ソート機能追加。デフォルトは昇順にした。
         /*$items = Board::all();*///N+1問題によりコメント化
-        $items = Board::withCount('posts')->get();//投稿内容の数を表示する。
-        return view('board.index', ['items' => $items]);
+        $items = Board::withCount('posts')//投稿内容の数を表示する。
+            ->orderBy('created_at', $sortOrder)//ソート機能よりデータを取得。(作成日(created_atより))
+            ->get();//データを全て表示する。
+        return view('board.index', ['items' => $items, 'sortOrder' => $sortOrder]);
     }
     //投稿内容
     public function show(Board $board)//indexより該当する投稿内容を表示

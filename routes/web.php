@@ -18,7 +18,7 @@ Route::middleware('auth')->group(function () {
 });
 
 //BoardControllerのアクション
-Route::get('board', 'App\Http\Controllers\BoardController@index');
+Route::get('board', 'App\Http\Controllers\BoardController@index')->name('board.index');
 Route::get('board/show/{board}', 'App\Http\Controllers\BoardController@show')->name('board.show');
 Route::get('board/create', 'App\Http\Controllers\BoardController@create');
 Route::post('board/create', 'App\Http\Controllers\BoardController@store');
