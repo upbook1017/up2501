@@ -4,15 +4,26 @@
 
 @section('content')
     <form action="{{ route('board.index') }}" method="get">
-        <label for="search">タイトル検索:</label>
-        <input type="text" name="search" id="search" value="{{ $search }}"
-            placeholder="タイトルを入力"><!--検索機能追加より入力欄を追加。-->
+        <table>
+            @error('search')<!--フォームリクエスト(SearchRequest.phpよりバリデーション設定。)-->
+                <tr>
+                    <td>{{ $message }}</td>
+                </tr>
+            @enderror
+            <tr>
+                <td>
+                    <label for="search">タイトル検索:</label>
+                    <input type="text" name="search" id="search" value="{{ $search }}"
+                        placeholder="タイトルを入力"><!--検索機能追加より入力欄を追加。-->
 
-        <label for="sortOrder">作成日の順番変更:</label>
-        <select name="sortOrder" id="sortOrder" onchange="this.form.submit()"><!--selectタグよりソート順の表示機能追加。-->
-            <option value="asc" {{ $sortOrder === 'asc' ? 'selected' : '' }}>作成日が古い順</option>
-            <option value="desc" {{ $sortOrder === 'desc' ? 'selected' : '' }}>作成日が新しい順</option>
-        </select>
+                    <label for="sortOrder">作成日の順番変更:</label>
+                    <select name="sortOrder" id="sortOrder" onchange="this.form.submit()"><!--selectタグよりソート順の表示機能追加。-->
+                        <option value="asc" {{ $sortOrder === 'asc' ? 'selected' : '' }}>作成日が古い順</option>
+                        <option value="desc" {{ $sortOrder === 'desc' ? 'selected' : '' }}>作成日が新しい順</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
     </form>
 
     @if ($items->isEmpty())<!--検索ワード空の場合。-->

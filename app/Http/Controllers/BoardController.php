@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Board;//Boardモデルを使用可能にする。
+use App\Http\Requests\SearchRequest;//フォームリクエストより検索機能のvalidateメソッドを使用可能にする。
 use App\Http\Requests\BoardAndPostRequest;//フォームリクエストよりvalidateメソッドを使用可能にする。
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;//cookieを使用可能にする。
@@ -10,7 +11,7 @@ use Illuminate\Support\Facades\Cookie;//cookieを使用可能にする。
 class BoardController extends Controller
 {
     //掲示板一覧
-    public function index(Request $request)//Board内データの値全てをindexに渡す。
+    public function index(SearchRequest $request)//Board内データの値全てをindexに渡す。
     {
         $search = $request->get('search', '');//検索機能追加。データを取得する。
         $sortOrder = $request->get('sortOrder', 'asc');//ソート機能追加。デフォルトは昇順にした。
