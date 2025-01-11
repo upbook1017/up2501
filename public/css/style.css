@@ -2,113 +2,185 @@
 
 /*基本設定*/
 body {
-	font-family:sans-serif;
-	color: black;
-	font-size: 16px;
-	margin: 0;
-	padding: 0;
+    font-family: sans-serif;
+    color: black;
+    font-size: 16px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-section, nav, header, main, footer {display:block;}
+section,
+nav,
+header,
+main,
+footer {
+    display: block;
+}
 
 h1 {
-	font-family:cursive;
-	font-weight:normal;
-	text-align:center;
-	margin-bottom: 0px;
+    font-family: cursive;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 0px;
 }
 
-ul, li {
-			padding: 0px 20px;
-			list-style: none;
-			display: inline-block;
-		}
+ul,
+li {
+    padding: 0px 20px;
+    list-style: none;
+    display: inline-block;
+}
 
-a { text-decoration: none;}
-a:link { color:#FFFFFF;}
-a:visited { color:#FFFFFF;}
-a:hover { color:#F7BE81;}
+a {
+    text-decoration: none;
+}
 
-.center { text-align: center; }
+a:link {
+    color: #FFFFFF;
+}
+
+a:visited {
+    color: #FFFFFF;
+}
+
+a:hover {
+    color: #F7BE81;
+}
+
+.center {
+    text-align: center;
+}
 
 /*headerの設定*/
 header {
-	width: 100%;
-	padding: 5px;
-	text-align: center;
-	position: relative;
-	background-color:#81BEF7;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    background-color: #81BEF7;
 }
 
 /*mainの設定*/
 main nav ul li {
-				padding: 0px 0px 0px 1100px;
-				margin-top: 0px;
-				margin-bottom: 0px;
-			}
+    padding: 0px 0px 0px 1100px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 
-main a:link { color:#81BEF7;}
-main a:visited { color:#81BEF7;}
-main a:hover { color:#F7BE81;}
+main a:link {
+    color: #81BEF7;
+}
+
+main a:visited {
+    color: #81BEF7;
+}
+
+main a:hover {
+    color: #F7BE81;
+}
+
 main a {
-			padding: 5px;
-			border: solid #6E6E6E;
-		}
+    padding: 5px;
+    border: solid #6E6E6E;
+}
 
 input {
-			font-size: 16px;
-		}
-
-.search {
-				margin-left: 205px;
-				width: 300px;
-			}
+    font-size: 16px;
+}
 
 table {
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 10px;
-		margin-bottom: 370px;
-		border: solid #100719;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 370px;
+    border: solid #100719;
 }
 
 table th {
-			background-color: #81DAF5;
-		}
+    background-color: #81DAF5;
+}
 
 table td {
-			background-color: #e6f1f6;
-		}
+    background-color: #e6f1f6;
+}
 
-.date {
-		width: 200px;
-	}
+/*board.blade.phpのstyle*/
+/*検索機能箇所*/
+.number_1 {
+    background-color: #ffffff;
+    margin-left: 205px;
+    width: 700px;
+}
 
-.contents {
-		width: 550px;
-	}
+/*エラーメッセージ*/
+.number_2 {
+    font-size: 16px;
+    color: red;
+}
 
-.people {
-		width: 110px;
-	}
+/*作成日箇所*/
+.number_3 {
+    margin-left: 20px;
+}
 
-.datetext ,.peopletext {
-		text-align: center;
-	}
+/*作成日(プルダウンメニュー箇所)*/
+.number_4 {
+    font-size: 16px;
+}
 
-.contentstext {
-			padding: 0px 0px 0px 10px;
-	}
+/*検索(ヒットしなかった時のメッセージ)*/
+.number_5 {
+    text-align: center;
+}
+
+/*「作成日」箇所*/
+.number_6 {
+    width: 200px;
+}
+
+/*「タイトル名」箇所*/
+.number_7 {
+    width: 550px;
+}
+
+/*「書き込み数」箇所*/
+.number_8 {
+    width: 110px;
+}
+
+/*「作成日」及び「書き込み数」(データ)箇所*/
+.number_9 {
+    text-align: center;
+}
+
+/*「タイトル名」(データ)位置*/
+.number_10 {
+    padding: 0px 0px 0px 10px;
+}
+
+/*「タイトル名」(データ)文字設定*/
+main td.number_10 a.number_11 {
+    color: black;
+    border: none;
+}
+
+/*「タイトル名」(データ)ホバー効果設定*/
+main td.number_10 a.number_11:hover {
+    color: #F7BE81;
+}
 
 /*footerの設定*/
 footer {
-	width: 100%;
-	position: fixed;
-	padding: 5px 0 100%;
-	text-align: center;
-	background-color: #81BEF7;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 5px 0;
+    text-align: center;
+    background-color: #81BEF7;
 }
 
 footer p {
-			color:#333333;
-		}
+    color: #333333;
+}

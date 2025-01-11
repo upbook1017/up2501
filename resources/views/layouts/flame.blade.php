@@ -11,7 +11,7 @@
     <header id="page">
         <nav>
             <ul>
-                <li><a href="home">HOME</a></li><!--href="アドレス名(web.php)"を入れること。-->
+                <li><a href="home">TOP</a></li><!--href="アドレス名(web.php)"を入れること。-->
                 <li><a href="info.blade.php">INFORMATION</a></li>
             </ul>
         </nav>
@@ -21,7 +21,7 @@
         @yield('content')
     </div>
     <footer>
-        <p>upbook1017_kejiban</p>
+        <p>upbook1017_up2501</p>
     </footer>
 </body>
 
