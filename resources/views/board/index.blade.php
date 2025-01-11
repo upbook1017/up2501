@@ -1,6 +1,4 @@
-@extends('layouts.home')
-
-@section('title', '掲示板一覧')
+@extends('layouts.flame')
 
 @section('content')
     <form action="{{ route('board.index') }}" method="get">

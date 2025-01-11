@@ -1,6 +1,4 @@
-@extends('layouts.home')
-
-@section('title', '掲示板新規作成')
+@extends('layouts.flame')
 
 @section('content')
     <form action="/board/create" method="post">

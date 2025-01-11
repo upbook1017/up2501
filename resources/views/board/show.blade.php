@@ -1,6 +1,4 @@
-@extends('layouts.home')
-
-@section('title', '投稿内容')
+@extends('layouts.flame')
 
 @section('content')
     <table>
