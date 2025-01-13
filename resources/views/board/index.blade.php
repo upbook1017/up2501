@@ -10,8 +10,7 @@
         </nav>
         <form action="{{ route('board.index') }}" method="get">
             <div class="number_1">
-                @error('search')
-                    <!--フォームリクエスト(SearchRequest.phpよりバリデーション設定。)-->
+                @error('search')<!--フォームリクエスト(SearchRequest.phpよりバリデーション設定。)-->
                     <div class="number_2">
                         <tr>
                             <td>{{ $message }}</td>
@@ -48,11 +47,13 @@
                 @foreach ($items as $item)
                     <tr>
                         <td class="number_9">{{ $item->created_at->format('Y-m-d') }}</td><!--レコードの作成日において「create_at」と命名規則が決まっている。-->
-                        <td class="number_10"><a href="{{ route('board.show', $item) }}" class="number_11">{{ $item->getData() }}</a></td><!--Boardモデルの全てのデータを出力-->
+                        <td class="number_10"><a href="{{ route('board.show', $item) }}"class="number_11">{{ $item->getData() }}</a></td><!--Boardモデルの全てのデータを出力-->
                         <td class="number_9">{{ $item->posts_count }}</td><!--withCountにおいて「posts_count」と命名規則が決まっている。-->
                     </tr>
                 @endforeach
             </table>
+
+            <div class="number_12">{{ $items->links() }}</div><!--ペジネーションよりリンクを追加。(また、app/Providers/AppServiceProvider.phpよりデフォルトを使用可能に設定している。)-->
         @endif
     </main>
 @endsection

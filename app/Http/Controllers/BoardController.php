@@ -21,7 +21,8 @@ class BoardController extends Controller
                 return $query->where('title', 'like', '%' . $search . '%');//Like演算子より部分検索ができる。
             })
             ->orderBy('created_at', $sortOrder)//ソート機能よりデータを取得。(作成日(created_atより))
-            ->get();//データを全て表示する。
+            ->paginate(10);//表示するデータを10個にした。
+        /*->get();*///データを全て表示する。→ペジネーション追加により全表示(get())をコメントアウト。
         return view('board.index', ['items' => $items, 'sortOrder' => $sortOrder, 'search' => $search]);
     }
     //投稿内容

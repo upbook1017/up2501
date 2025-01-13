@@ -1,15 +1,21 @@
 @charset "UTF-8";
 
 /*基本設定*/
+html, body {
+    height: 100%; /* ページ全体の高さを指定 */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* 横スクロールを無効化 */
+}
+
 body {
     font-family: sans-serif;
     color: black;
     font-size: 16px;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+    width: 100%;
 }
 
+/*要素のリセット*/
 section,
 nav,
 header,
@@ -93,7 +99,7 @@ table {
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    margin-bottom: 370px;
+    margin-bottom: 10px;
     border: solid #100719;
 }
 
@@ -170,6 +176,51 @@ main td.number_10 a.number_11:hover {
     color: #F7BE81;
 }
 
+/* ペジネーション設定(干渉があるため、「!important」を使う) */
+.number_12 .pagination {
+    display: flex !important; /* 横並びにするためflexを強制 */
+    justify-content: center;
+    list-style: none;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.number_12 .pagination li {
+    margin: 3px !important;
+    padding: 0 !important;
+}
+
+.number_12 .pagination a,
+.number_12 .pagination span {
+    display: inline-flex !important;
+    padding: 2px 6px !important;
+    background-color: #81BEF7 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #6E6E6E !important;
+    text-decoration: none !important;
+    border-radius: 3px !important;
+    font-size: 14px !important;
+    align-items: center; /* 縦方向の中央揃え */
+    justify-content: center; /* 横方向の中央揃え */
+    margin: 0 !important; /* 番号同士の間隔を完全にゼロ */
+}
+
+/* ペジネーションhover時の背景色 */
+.number_12 .pagination a:hover,
+.number_12 .pagination span {
+    background-color: #F7BE81 !important;
+}
+
+.number_12 .pagination .disabled span {
+    background-color: #e6e6e6 !important;
+    color: #bfbfbf !important;
+}
+
+.number_12 .pagination .active a {
+    background-color: #F7BE81 !important;
+    color: #333333 !important;
+}
+
 /*footerの設定*/
 footer {
     width: 100%;
@@ -177,6 +228,7 @@ footer {
     bottom: 0;
     left: 0;
     padding: 5px 0;
+    margin-top: 0;
     text-align: center;
     background-color: #81BEF7;
 }
