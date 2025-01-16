@@ -21,7 +21,7 @@
                     <td>
                         <label for="search">タイトル検索:</label>
                         <input type="text" name="search" id="search" value="{{ $search }}"
-                            placeholder="10文字以内"><!--検索機能追加より入力欄を追加。-->
+                            placeholder="10文字以内" class="titlesearch"><!--検索機能追加より入力欄を追加。-->
                         <input type="submit" value="検索">
 
                         <label for="sortOrder" class="number_3">作成日の順番変更:</label>
@@ -36,7 +36,7 @@
         </form>
 
         @if ($items->isEmpty())<!--検索ワード空の場合。-->
-            <p class="number_5">検索ワードがヒットしませんでした。</p>
+            <p class="number_5">検索ワードがヒットしませんでした。(未入力検索より全てのタイトル名が表示されます。)</p>
         @else
             <table border="1">
                 <tr>

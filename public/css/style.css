@@ -1,11 +1,14 @@
 @charset "UTF-8";
 
 /*基本設定*/
-html, body {
-    height: 100%; /* ページ全体の高さを指定 */
+html,
+body {
+    /* ページ全体の高さを指定 */
+    height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* 横スクロールを無効化 */
+    /* 横スクロールを無効化 */
+    overflow-x: hidden;
 }
 
 body {
@@ -119,6 +122,12 @@ table td {
     width: 700px;
 }
 
+/*検索入力フォームの設定*/
+.titlesearch {
+    border: 1px solid;
+    border-color: #6E6E6E;
+}
+
 /*エラーメッセージ*/
 .number_2 {
     font-size: 16px;
@@ -178,7 +187,8 @@ main td.number_10 a.number_11:hover {
 
 /* ペジネーション設定(干渉があるため、「!important」を使う) */
 .number_12 .pagination {
-    display: flex !important; /* 横並びにするためflexを強制 */
+    /* 横並びにするためflexを強制 */
+    display: flex !important;
     justify-content: center;
     list-style: none;
     padding: 0 !important;
@@ -200,9 +210,12 @@ main td.number_10 a.number_11:hover {
     text-decoration: none !important;
     border-radius: 3px !important;
     font-size: 14px !important;
-    align-items: center; /* 縦方向の中央揃え */
-    justify-content: center; /* 横方向の中央揃え */
-    margin: 0 !important; /* 番号同士の間隔を完全にゼロ */
+    /* 縦方向の中央揃え */
+    align-items: center;
+    /* 横方向の中央揃え */
+    justify-content: center;
+    /* 番号同士の間隔を完全にゼロ */
+    margin: 0 !important;
 }
 
 /* ペジネーションhover時の背景色 */
@@ -219,6 +232,108 @@ main td.number_10 a.number_11:hover {
 .number_12 .pagination .active a {
     background-color: #F7BE81 !important;
     color: #333333 !important;
+}
+
+/*「投稿一覧に戻る」の位置変更(セレクタより再設定とする。)*/
+ul#number_13 {
+    padding: 0px 0px 0px 1104px;
+}
+
+ul#number_13 li {
+    padding: 0;
+    margin: 0;
+}
+
+/*「タイトル名」「名前」「投稿内容」エラーの文字設定*/
+.number_14 {
+    font-size: 16px;
+    color: red;
+    padding: 0px 0px;
+    margin-left: 205px;
+}
+
+/*「タイトル名」の文字設定*/
+.number_15 {
+    font-size: 16px;
+    color: black;
+    padding: 0px 0px;
+    margin: 0px 0px 0px 205px;
+    border: none;
+}
+
+/*「タイトル名」の設定*/
+.number_16-1 {
+    background-color: #FFFFFF;
+}
+
+/*「タイトル名」入力フォームの設定*/
+.number_16-2 {
+    width: 350px;
+    border: 1px solid;
+    border-color: #6E6E6E;
+}
+
+/*「名前」の文字設定*/
+.number_17 {
+    font-size: 16px;
+    color: black;
+    padding: 0px 0px;
+    margin: 0px 0px 0px 205px;
+    border: none;
+}
+
+/*「名前」の設定*/
+.number_18-1 {
+    background-color: #FFFFFF;
+}
+
+/*「名前」入力フォームの設定*/
+.number_18-2 {
+    width: 450px;
+    border: 1px solid;
+    border-color: #6E6E6E;
+}
+
+/*「投稿内容」の文字設定*/
+.number_19 {
+    width: 75px;
+    font-size: 16px;
+    text-align: left;
+    color: black;
+    padding: 0px 0px 3px 0px;
+    margin: 0px 0px 0px 205px;
+    border: none;
+}
+
+/*「投稿内容」入力フォームの位置設定*/
+.number_20-1 {
+    font-size: 16px;
+    padding: 0px 0px;
+    margin-left: 207px;
+}
+
+/*「投稿内容」入力フォーム枠の設定*/
+.number_20-2 {
+    display: block;
+    text-align: left;
+    width: 860px;
+    height: 210px;
+    padding: 0px 5px 0px 5px;
+    margin-left: 205;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    border: 1px solid;
+    border-color: #6E6E6E;
+}
+
+/*「新規投稿」ボタンの設定*/
+.number_21 {
+    font-size: 16px;
+    color: black;
+    padding: 0px 0px;
+    margin: 3px 0px 0px 1003px;
 }
 
 /*footerの設定*/
