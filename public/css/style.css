@@ -234,6 +234,7 @@ main td.number_10 a.number_11:hover {
     color: #333333 !important;
 }
 
+/*cerate.blade.phpのstyle*/
 /*「投稿一覧に戻る」の位置変更(セレクタより再設定とする。)*/
 ul#number_13 {
     padding: 0px 0px 0px 1104px;
@@ -334,6 +335,67 @@ ul#number_13 li {
     color: black;
     padding: 0px 0px;
     margin: 3px 0px 0px 1003px;
+}
+
+/*show.blade.phpのstyle*/
+/*「投稿内容」の枠設定*/
+.number_22 {
+    width: 700px;
+    height: 200px;
+    overflow: auto;
+    border: 1px solid #6E6E6E;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+/*「投稿内容」のテーブル設定*/
+.number_23 {
+    font-size: 16px;
+    color: black;
+    /* 角を丸くする */
+    border-radius: 10px;
+    padding: 0px 3px;
+    margin: 0;
+    border: none;
+}
+
+/*「投稿内容」のテーブル内の設定*/
+.number_24 {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/*「投稿内容」入力フォームの位置設定*/
+.number_25-1 {
+    font-size: 16px;
+    padding: 0px 0px;
+    margin-left: 207px;
+}
+
+/*「投稿内容」入力フォーム枠の設定*/
+.number_25-2 {
+    display: block;
+    text-align: left;
+    width: 860px;
+    height: 100px;
+    padding: 0px 5px 0px 5px;
+    margin-left: 205;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    border: 1px solid;
+    border-color: #6E6E6E;
+}
+
+/*「投稿内容」送信ボタンの設定*/
+.number_26 {
+    font-size: 16px;
+    color: black;
+    padding: 0px 0px;
+    margin: 3px 0px 0px 1033px;
 }
 
 /*footerの設定*/

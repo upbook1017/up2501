@@ -56,8 +56,8 @@
 
             <div class="number_20-1">
                 <tr>
-                    <td>
-                        <textarea class="number_20-2" name="posts[message]" placeholder="投稿内容は0~100文字までです。" value="{{ old('posts.message') }}"></textarea>
+                    <td><!--textareaはvalueを使用できないため閉箇所にold記載。-->
+                        <textarea class="number_20-2" name="posts[message]" placeholder="投稿内容は0~100文字までです。">{{ old('posts.message') }}</textarea>
                     </td>
                 </tr>
             </div>
