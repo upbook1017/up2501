@@ -327,6 +327,7 @@ ul#number_13 li {
     font-size: 16px;
     border: 1px solid;
     border-color: #6E6E6E;
+    resize: none;
 }
 
 /*「新規投稿」ボタンの設定*/
@@ -388,6 +389,7 @@ ul#number_13 li {
     font-size: 16px;
     border: 1px solid;
     border-color: #6E6E6E;
+    resize: none;
 }
 
 /*「投稿内容」送信ボタンの設定*/

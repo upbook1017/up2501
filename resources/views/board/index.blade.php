@@ -20,8 +20,8 @@
                 <tr>
                     <td>
                         <label for="search">タイトル検索:</label>
-                        <input type="text" name="search" id="search" value="{{ $search }}"
-                            placeholder="10文字以内" class="titlesearch"><!--検索機能追加より入力欄を追加。-->
+                        <input type="text" name="search" id="search" value="{{ $search }}" placeholder="10文字以内"
+                            class="titlesearch"><!--検索機能追加より入力欄を追加。-->
                         <input type="submit" value="検索">
 
                         <label for="sortOrder" class="number_3">作成日の順番変更:</label>
@@ -52,8 +52,8 @@
                     </tr>
                 @endforeach
             </table>
-
-            <div class="number_12">{{ $items->links() }}</div><!--ペジネーションよりリンクを追加。(また、app/Providers/AppServiceProvider.phpよりデフォルトを使用可能に設定している。)-->
+            <!--ペジネーションよりリンクを追加。(また、app/Providers/AppServiceProvider.phpよりデフォルトを使用可能に設定している。)/appends(追加)より検索機能とソート機能のパラメーターを引き継がせた。-->
+            <div class="number_12">{{ $items->appends(['search' => $search, 'sortOrder' => $sortOrder])->links() }}</div>
         @endif
     </main>
 @endsection
