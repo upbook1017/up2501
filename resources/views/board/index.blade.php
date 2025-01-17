@@ -5,7 +5,7 @@
         <h1>掲示板一覧</h1>
         <nav>
             <ul>
-                <li><a href="board/create">新規投稿を作成</a></li>
+                <li><a href="board/create" class="number_0">新規投稿を作成</a></li>
             </ul>
         </nav>
         <form action="{{ route('board.index') }}" method="get">

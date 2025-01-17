@@ -9,6 +9,7 @@ body {
     padding: 0;
     /* 横スクロールを無効化 */
     overflow-x: hidden;
+    background-color: #e6f1f6;
 }
 
 body {
@@ -111,13 +112,17 @@ table th {
 }
 
 table td {
-    background-color: #e6f1f6;
+    background-color: #c6e3ef;
 }
 
 /*board.blade.phpのstyle*/
 /*検索機能箇所*/
+.number_0 {
+    background-color: #FFFFFF;
+}
+
 .number_1 {
-    background-color: #ffffff;
+    background-color: #e6f1f6;
     margin-left: 205px;
     width: 700px;
 }
@@ -245,6 +250,10 @@ ul#number_13 li {
     margin: 0;
 }
 
+ul#number_13 a {
+    background-color: #FFFFFF;
+}
+
 /*「タイトル名」「名前」「投稿内容」エラーの文字設定*/
 .number_14 {
     font-size: 16px;
@@ -262,9 +271,14 @@ ul#number_13 li {
     border: none;
 }
 
+.number_15 th {
+    border: 1px solid;
+    border-color: #6E6E6E;
+}
+
 /*「タイトル名」の設定*/
 .number_16-1 {
-    background-color: #FFFFFF;
+    background-color: #e6f1f6;
 }
 
 /*「タイトル名」入力フォームの設定*/
@@ -283,9 +297,14 @@ ul#number_13 li {
     border: none;
 }
 
+.number_17 th {
+    border: 1px solid;
+    border-color: #6E6E6E;
+}
+
 /*「名前」の設定*/
 .number_18-1 {
-    background-color: #FFFFFF;
+    background-color: #e6f1f6;
 }
 
 /*「名前」入力フォームの設定*/
@@ -304,6 +323,11 @@ ul#number_13 li {
     padding: 0px 0px 3px 0px;
     margin: 0px 0px 0px 205px;
     border: none;
+}
+
+.number_19 th {
+    border: 1px solid;
+    border-color: #6E6E6E;
 }
 
 /*「投稿内容」入力フォームの位置設定*/
@@ -349,6 +373,7 @@ ul#number_13 li {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5px;
+    background-color: #FFFFFF;
 }
 
 /*「投稿内容」のテーブル設定*/
