@@ -23,7 +23,7 @@ class PostController extends Controller
         $post->fill($form)->save();
         $board_id = $form['board_id'];
 
-        return redirect()->route('board.show', ['board' => $board_id]);
+        return redirect()->to(route('board.show', ['board' => $board_id]) . "#post-{$post->id}");//toを使ってフラグメントを追加(指定したidへ表示する。)
     }
 
 }

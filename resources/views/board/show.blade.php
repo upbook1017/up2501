@@ -13,7 +13,7 @@
         <div class="number_22">
 
             @foreach ($posts as $post)
-                <table class="number_23">
+                <table class="number_23" id="post-{{ $post->id }}"><!--id属性はPostController.phpのリダイレクトより追加。-->
                     <tr>
                         <!--<td>{{-- $post->getData() --}}</td> 投稿内容を全て出力する(表示との兼ね合いでgetDataでの出力はコメントアウトとする。)-->
                         <td class="number_24">{{ $post->name }}<br>{{ $post->message }}</td>
