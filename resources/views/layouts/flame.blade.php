@@ -11,8 +11,8 @@
     <header id="page">
         <nav>
             <ul>
-                <li><a href="home">TOP</a></li><!--href="アドレス名(web.php)"を入れること。-->
-                <li><a href="info.blade.php">INFORMATION</a></li>
+                <li><a href="/top">TOP</a></li><!--href="アドレス名(web.php)"を入れること。-->
+                <li><a href="/info">INFORMATION</a></li>
             </ul>
         </nav>
     </header>

@@ -17,6 +17,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+//topページのroute
+Route::get('top', function () {
+    return view('top');
+});
+
 //BoardControllerのアクション
 Route::get('board', 'App\Http\Controllers\BoardController@index')->name('board.index');
 Route::get('board/show/{board}', 'App\Http\Controllers\BoardController@show')->name('board.show');
