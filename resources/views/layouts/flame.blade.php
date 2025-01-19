@@ -12,7 +12,7 @@
         <nav>
             <ul>
                 <li><a href="/top">TOP</a></li><!--href="アドレス名(web.php)"を入れること。-->
-                <li><a href="/info">INFORMATION</a></li>
+                <li><a href="/board/info">INFORMATION</a></li>
             </ul>
         </nav>
     </header>

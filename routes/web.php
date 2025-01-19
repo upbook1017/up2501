@@ -24,11 +24,16 @@ Route::get('top', function () {
 
 //BoardControllerのアクション
 Route::get('board', 'App\Http\Controllers\BoardController@index')->name('board.index');
-Route::get('board/show/{board}', 'App\Http\Controllers\BoardController@show')->name('board.show');
+Route::get('board/show/{board}', 'App\Http\Controllers\BoardController@show')->name('board.show');//nameは名前付きルート名
 Route::get('board/create', 'App\Http\Controllers\BoardController@create');
 Route::post('board/create', 'App\Http\Controllers\BoardController@store');
 
 //PostControllerのアクション
 Route::post('board/show/{board}', 'App\Http\Controllers\PostController@store')->name('board.show');
+
+//InfoControllerのアクション
+Route::get('board/info', 'App\Http\Controllers\InfoController@info');
+Route::post('board/info', 'App\Http\Controllers\InfoController@send');
+Route::get('board/success', 'App\Http\Controllers\InfoController@success')->name('board.success');
 
 require __DIR__ . '/auth.php';
