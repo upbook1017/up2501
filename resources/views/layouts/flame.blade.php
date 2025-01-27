@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--スマホ用-->
     <title>よくある掲示板サイト</title>
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 </head>
