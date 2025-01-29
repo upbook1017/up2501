@@ -9,16 +9,16 @@
 </head>
 
 <body>
-    <header id="page">
+    <header>
         <nav>
             <ul>
-                <li><a href="/top">TOP</a></li><!--href="アドレス名(web.php)"を入れること。-->
-                <li><a href="/board/info">INFORMATION</a></li>
+                <li><a href="/top" class="number_0">TOP</a></li><!--href="アドレス名(web.php)"を入れること。-->
+                <li><a href="/board/info" class="number_0">INFORMATION</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="content">
+    <div>
         @yield('content')
     </div>
     <footer>
