@@ -440,443 +440,448 @@ footer p {
 
 /*-----------------スマホ用----------------------*/
 @media screen and (max-width: 768px) {
+
     /*基本設定*/
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    background-color: #e6f1f6;
-    font-family: sans-serif;
-    color: black;
-    font-size: 10px;
-}
+    html,
+    body {
+        overflow-y: auto;
+    }
 
-h1 {
-    font-family: cursive;
-    font-weight: normal;
-    text-align: center;
-    margin-bottom: 0px;
-}
+    body {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-color: #e6f1f6;
+        font-family: sans-serif;
+        color: black;
+        font-size: 10px;
+    }
 
-ul,
-li {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: inline-block;
-}
+    h1 {
+        font-family: cursive;
+        font-weight: normal;
+        text-align: center;
+        margin-bottom: 0px;
+    }
 
-a {
-    text-decoration: none;
-}
+    ul,
+    li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: inline-block;
+    }
 
-a:link {
-    color: #FFFFFF;
-}
+    a {
+        text-decoration: none;
+    }
 
-a:visited {
-    color: #FFFFFF;
-}
+    a:link {
+        color: #FFFFFF;
+    }
 
-a:hover {
-    color: #F7BE81;
-}
+    a:visited {
+        color: #FFFFFF;
+    }
 
-/*headerの設定*/
-header {
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    background-color: #81BEF7;
-}
+    a:hover {
+        color: #F7BE81;
+    }
 
-.number_0 {
-    padding: 20px;
-}
+    /*headerの設定*/
+    header {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        background-color: #81BEF7;
+    }
 
-/*mainの設定*/
-main a:link {
-    color: #81BEF7;
-}
+    .number_0 {
+        padding: 20px;
+    }
 
-main a:visited {
-    color: #81BEF7;
-}
+    /*mainの設定*/
+    main a:link {
+        color: #81BEF7;
+    }
 
-main a:hover {
-    color: #F7BE81;
-}
+    main a:visited {
+        color: #81BEF7;
+    }
 
-main a {
-    padding: 5px;
-    border: solid #6E6E6E;
-}
+    main a:hover {
+        color: #F7BE81;
+    }
 
-input {
-    font-size: 10px;
-}
+    main a {
+        padding: 5px;
+        border: solid #6E6E6E;
+    }
 
-table {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: solid #100719;
-}
+    input {
+        font-size: 10px;
+    }
 
-table th {
-    background-color: #81DAF5;
-}
+    table {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: solid #100719;
+    }
 
-table td {
-    background-color: #c6e3ef;
-}
+    table th {
+        background-color: #81DAF5;
+    }
 
-/*board.blade.phpのstyle*/
-.number1_1 {
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
+    table td {
+        background-color: #c6e3ef;
+    }
 
-.number1_2 {
-    text-align: right;
-}
+    /*board.blade.phpのstyle*/
+    .number1_1 {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-.number1_3 {
-    background-color: #FFFFFF;
-    margin-bottom: 10px;
-}
+    .number1_2 {
+        text-align: right;
+    }
 
-.number1_4 {
-    text-align: left;
-    font-size: 10px;
-    color: red;
-}
+    .number1_3 {
+        background-color: #FFFFFF;
+        margin-bottom: 10px;
+    }
 
-.number1_5 {
-    text-align: left;
-}
+    .number1_4 {
+        text-align: left;
+        font-size: 10px;
+        color: red;
+    }
 
-/*検索入力フォームの設定*/
-.titlesearch {
-    width: 65px;
-    font-size: 10px;
-    border: 1px solid;
-    border-color: #6E6E6E;
-}
+    .number1_5 {
+        text-align: left;
+    }
 
-/*作成日(プルダウンメニュー箇所)*/
-.number1_6 {
-    font-size: 10px;
-}
+    /*検索入力フォームの設定*/
+    .titlesearch {
+        width: 65px;
+        font-size: 10px;
+        border: 1px solid;
+        border-color: #6E6E6E;
+    }
 
-.number1_7 {
-    width: 100%;
-}
+    /*作成日(プルダウンメニュー箇所)*/
+    .number1_6 {
+        font-size: 10px;
+    }
 
-/*「タイトル名」(データ)位置*/
-.number1_8 {
-    text-align: left;
-    padding-left: 10px;
-}
+    .number1_7 {
+        width: 100%;
+    }
 
-/*「タイトル名」(データ)文字設定*/
-main td.number1_8 a.number1_9 {
-    color: black;
-    border: none;
-}
+    /*「タイトル名」(データ)位置*/
+    .number1_8 {
+        text-align: left;
+        padding-left: 10px;
+    }
 
-/*「タイトル名」(データ)ホバー効果設定*/
-main td.number1_8 a.number1_9:hover {
-    color: #F7BE81;
-}
+    /*「タイトル名」(データ)文字設定*/
+    main td.number1_8 a.number1_9 {
+        color: black;
+        border: none;
+    }
 
-/* ペジネーション設定(干渉があるため、「!important」を使う) */
-.number1_10 .pagination {
-    /* 横並びにするためflexを強制 */
-    display: flex !important;
-    justify-content: center;
-    list-style: none;
-    padding: 0 !important;
-    margin: 0 !important;
-}
+    /*「タイトル名」(データ)ホバー効果設定*/
+    main td.number1_8 a.number1_9:hover {
+        color: #F7BE81;
+    }
 
-.number1_10 .pagination li {
-    margin: 3px !important;
-    padding: 0 !important;
-}
+    /* ペジネーション設定(干渉があるため、「!important」を使う) */
+    .number1_10 .pagination {
+        /* 横並びにするためflexを強制 */
+        display: flex !important;
+        justify-content: center;
+        list-style: none;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
 
-.number1_10 .pagination a,
-.number1_10 .pagination span {
-    display: inline-flex !important;
-    padding: 2px 6px !important;
-    background-color: #81BEF7 !important;
-    color: #FFFFFF !important;
-    border: 1px solid #6E6E6E !important;
-    text-decoration: none !important;
-    border-radius: 3px !important;
-    font-size: 10px !important;
-    /* 縦方向の中央揃え */
-    align-items: center;
-    /* 横方向の中央揃え */
-    justify-content: center;
-    /* 番号同士の間隔を完全にゼロ */
-    margin: 0 !important;
-}
+    .number1_10 .pagination li {
+        margin: 3px !important;
+        padding: 0 !important;
+    }
 
-/* ペジネーションhover時の背景色 */
-.number1_10 .pagination a:hover,
-.number1_10 .pagination span {
-    background-color: #F7BE81 !important;
-}
+    .number1_10 .pagination a,
+    .number1_10 .pagination span {
+        display: inline-flex !important;
+        padding: 2px 6px !important;
+        background-color: #81BEF7 !important;
+        color: #FFFFFF !important;
+        border: 1px solid #6E6E6E !important;
+        text-decoration: none !important;
+        border-radius: 3px !important;
+        font-size: 10px !important;
+        /* 縦方向の中央揃え */
+        align-items: center;
+        /* 横方向の中央揃え */
+        justify-content: center;
+        /* 番号同士の間隔を完全にゼロ */
+        margin: 0 !important;
+    }
 
-.number1_10 .pagination .disabled span {
-    background-color: #e6e6e6 !important;
-    color: #bfbfbf !important;
-}
+    /* ペジネーションhover時の背景色 */
+    .number1_10 .pagination a:hover,
+    .number1_10 .pagination span {
+        background-color: #F7BE81 !important;
+    }
 
-.number1_10 .pagination .active a {
-    background-color: #F7BE81 !important;
-    color: #333333 !important;
-}
+    .number1_10 .pagination .disabled span {
+        background-color: #e6e6e6 !important;
+        color: #bfbfbf !important;
+    }
 
-/*「タイトル名」の文字設定*/
-.number_15 {
-    font-size: 10px;
-    text-align: left;
-    color: black;
-    padding: 0px 0px;
-    margin: 0px 0px 0px 0px;
-    border: none;
-}
+    .number1_10 .pagination .active a {
+        background-color: #F7BE81 !important;
+        color: #333333 !important;
+    }
 
-.number_15 th {
-    border: 1px solid;
-    border-color: #6E6E6E;
-}
+    /*「タイトル名」の文字設定*/
+    .number_15 {
+        font-size: 10px;
+        text-align: left;
+        color: black;
+        padding: 0px 0px;
+        margin: 0px 0px 0px 0px;
+        border: none;
+    }
 
-/*「タイトル名」の設定*/
-.number_16-1 {
-    background-color: #e6f1f6;
-}
+    .number_15 th {
+        border: 1px solid;
+        border-color: #6E6E6E;
+    }
 
-/*「タイトル名」入力フォームの設定*/
-.number_16-2 {
-    width: 270px;
-    border: 1px solid;
-    border-color: #6E6E6E;
-}
+    /*「タイトル名」の設定*/
+    .number_16-1 {
+        background-color: #e6f1f6;
+    }
 
-
-/*「名前」の文字設定*/
-.number_17 {
-    font-size: 10px;
-    text-align: left;
-    color: black;
-    padding: 0px 0px;
-    margin: 0px 0px 0px 0px;
-    border: none;
-}
-
-.number_17 th {
-    border: 1px solid;
-    border-color: #6E6E6E;
-}
-
-/*「名前」の設定*/
-.number_18-1 {
-    background-color: #e6f1f6;
-}
-
-/*「名前」入力フォームの設定*/
-.number_18-2 {
-    width: 300px;
-    border: 1px solid;
-    border-color: #6E6E6E;
-}
-
-/*「投稿内容」の文字設定*/
-.number_19 {
-    width: 50px;
-    font-size: 10px;
-    text-align: left;
-    color: black;
-    padding: 0px 0px 3px 0px;
-    margin: 0px 0px 0px 0px;
-    border: none;
-}
-
-.number_19 th {
-    border: 1px solid;
-    border-color: #6E6E6E;
-}
-
-/*「投稿内容」入力フォームの位置設定*/
-.number_20-1 {
-    font-size: 10px;
-    padding: 0px 0px;
-    margin-left: 0;
-}
-
-/*「投稿内容」入力フォーム枠の設定*/
-.number_20-2 {
-    display: block;
-    text-align: left;
-    width: 100%;
-    height: 210px;
-    padding: 0px 0px 0px 0px;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 10px;
-    border: 1px solid;
-    border-color: #6E6E6E;
-    resize: none;
-}
-
-/*「新規投稿」ボタンの設定*/
-.number_21 {
-    font-size: 10px;
-    text-align: right;
-    color: black;
-    padding: 0px 0px;
-    margin: 3px 0px 0px 0px;
-}
-
-/*show.blade.phpのstyle*/
-/*「投稿内容」の枠設定*/
-.number_22 {
-    width: 100%;
-    height: 200px;
-    overflow: auto;
-    border: 1px solid #6E6E6E;
-    display: block;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 5px;
-    background-color: #FFFFFF;
-}
-
-/*「投稿内容」のテーブル設定*/
-.number_23 {
-    font-size: 10px;
-    color: black;
-    /* 角を丸くする */
-    border-radius: 10px;
-    padding: 0px 3px;
-    margin: 0;
-    border: none;
-}
-
-/*「投稿内容」のテーブル内の設定*/
-.number_24 {
-    text-align: left;
-    padding: 5px;
-    border-radius: 10px;
-}
-
-/*「投稿内容」入力フォームの位置設定*/
-.number_25-1 {
-    font-size: 10px;
-    padding: 0px 0px;
-    margin-left: 0;
-    margin-right: 0;
-}
-
-/*「投稿内容」入力フォーム枠の設定*/
-.number_25-2 {
-    display: block;
-    text-align: left;
-    width: 100%;
-    height: 100px;
-    padding: 0px 0px 0px 0px;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 10px;
-    border: 1px solid;
-    border-color: #6E6E6E;
-    resize: none;
-}
-
-/*「投稿内容」送信ボタンの設定*/
-.number_26 {
-    font-size: 10px;
-    text-align: right;
-    color: black;
-    padding: 0px 0px;
-    margin: 3px 0px 0px 0px;
-}
-
-/*info.blade.phpの設定*/
-/*「お問い合わせ内容」の文字設定*/
-.number_27 {
-    width: 95px;
-    font-size: 10px;
-    text-align: left;
-    color: black;
-    padding: 0px 0px 3px 0px;
-    margin: 0px 0px 0px 0px;
-    border: none;
-}
-
-.number_27 th {
-    border: 1px solid;
-    border-color: #6E6E6E;
-}
-
-/*「お問い合わせ」送信ボタンの設定*/
-.number_28 {
-    font-size: 10px;
-    text-align: right;
-    color: black;
-    padding: 0px 0px;
-    margin: 3px 0px 0px 0px;
-}
-
-/*success.blade.php_h1の設定*/
-.number_29 {
-    font-family: cursive;
-    font-weight: normal;
-    text-align: center;
-    margin: 50px 0px 50px 0px;
-}
-
-/*「投稿一覧に戻る」の位置変更*/
-.number_30 {
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-
-.number1_31 {
-    background-color: #FFFFFF;
-    margin-bottom: 10px;
-}
+    /*「タイトル名」入力フォームの設定*/
+    .number_16-2 {
+        width: 270px;
+        border: 1px solid;
+        border-color: #6E6E6E;
+    }
 
 
-/*footerの設定*/
-footer {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    padding: 5px 0;
-    margin-top: 0;
-    text-align: center;
-    background-color: #81BEF7;
-}
+    /*「名前」の文字設定*/
+    .number_17 {
+        font-size: 10px;
+        text-align: left;
+        color: black;
+        padding: 0px 0px;
+        margin: 0px 0px 0px 0px;
+        border: none;
+    }
 
-footer p {
-    color: #333333;
-}
+    .number_17 th {
+        border: 1px solid;
+        border-color: #6E6E6E;
+    }
+
+    /*「名前」の設定*/
+    .number_18-1 {
+        background-color: #e6f1f6;
+    }
+
+    /*「名前」入力フォームの設定*/
+    .number_18-2 {
+        width: 300px;
+        border: 1px solid;
+        border-color: #6E6E6E;
+    }
+
+    /*「投稿内容」の文字設定*/
+    .number_19 {
+        width: 50px;
+        font-size: 10px;
+        text-align: left;
+        color: black;
+        padding: 0px 0px 3px 0px;
+        margin: 0px 0px 0px 0px;
+        border: none;
+    }
+
+    .number_19 th {
+        border: 1px solid;
+        border-color: #6E6E6E;
+    }
+
+    /*「投稿内容」入力フォームの位置設定*/
+    .number_20-1 {
+        font-size: 10px;
+        padding: 0px 0px;
+        margin-left: 0;
+    }
+
+    /*「投稿内容」入力フォーム枠の設定*/
+    .number_20-2 {
+        display: block;
+        text-align: left;
+        width: 100%;
+        height: 210px;
+        padding: 0px 0px 0px 0px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 10px;
+        border: 1px solid;
+        border-color: #6E6E6E;
+        resize: none;
+    }
+
+    /*「新規投稿」ボタンの設定*/
+    .number_21 {
+        font-size: 10px;
+        text-align: right;
+        color: black;
+        padding: 0px 0px;
+        margin: 3px 0px 0px 0px;
+    }
+
+    /*show.blade.phpのstyle*/
+    /*「投稿内容」の枠設定*/
+    .number_22 {
+        width: 100%;
+        height: 200px;
+        overflow: auto;
+        border: 1px solid #6E6E6E;
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 5px;
+        background-color: #FFFFFF;
+    }
+
+    /*「投稿内容」のテーブル設定*/
+    .number_23 {
+        font-size: 10px;
+        color: black;
+        /* 角を丸くする */
+        border-radius: 10px;
+        padding: 0px 3px;
+        margin: 0;
+        border: none;
+    }
+
+    /*「投稿内容」のテーブル内の設定*/
+    .number_24 {
+        text-align: left;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    /*「投稿内容」入力フォームの位置設定*/
+    .number_25-1 {
+        font-size: 10px;
+        padding: 0px 0px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /*「投稿内容」入力フォーム枠の設定*/
+    .number_25-2 {
+        display: block;
+        text-align: left;
+        width: 100%;
+        height: 100px;
+        padding: 0px 0px 0px 0px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 10px;
+        border: 1px solid;
+        border-color: #6E6E6E;
+        resize: none;
+    }
+
+    /*「投稿内容」送信ボタンの設定*/
+    .number_26 {
+        font-size: 10px;
+        text-align: right;
+        color: black;
+        padding: 0px 0px;
+        margin: 3px 0px 0px 0px;
+    }
+
+    /*info.blade.phpの設定*/
+    /*「お問い合わせ内容」の文字設定*/
+    .number_27 {
+        width: 95px;
+        font-size: 10px;
+        text-align: left;
+        color: black;
+        padding: 0px 0px 3px 0px;
+        margin: 0px 0px 0px 0px;
+        border: none;
+    }
+
+    .number_27 th {
+        border: 1px solid;
+        border-color: #6E6E6E;
+    }
+
+    /*「お問い合わせ」送信ボタンの設定*/
+    .number_28 {
+        font-size: 10px;
+        text-align: right;
+        color: black;
+        padding: 0px 0px;
+        margin: 3px 0px 0px 0px;
+    }
+
+    /*success.blade.php_h1の設定*/
+    .number_29 {
+        font-family: cursive;
+        font-weight: normal;
+        text-align: center;
+        margin: 50px 0px 50px 0px;
+    }
+
+    /*「投稿一覧に戻る」の位置変更*/
+    .number_30 {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .number1_31 {
+        background-color: #FFFFFF;
+        margin-bottom: 10px;
+    }
+
+
+    /*footerの設定*/
+    footer {
+        width: 100%;
+        left: 0;
+        padding: 5px 0;
+        margin-top: 0;
+        text-align: center;
+        background-color: #81BEF7;
+    }
+
+    footer p {
+        color: #333333;
+    }
 
 }
